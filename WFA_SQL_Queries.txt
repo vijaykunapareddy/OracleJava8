@@ -1,0 +1,15 @@
+-->To Retrive TransactionIDs for {ApprovePerson_Script}
+Select * From PS_UC_SS_TRANSACT
+WHERE BUSINESS_UNIT = 'LACMP'
+AND APPR_STATUS = 'P'
+AND ACTION = 'HIR'
+AND EMPLID = 'NEW'
+AND EFFDT_NOKEY = '15-JUN-20'
+ORDER BY UC_TRANSACT_ID DESC;
+
+
+--> To retrieve HireRequestIDs for {HirePerson_Script}
+Select * From PS_HR_Request
+WHERE BUSINESS_UNIT= 'LACMP'
+AND EMPLID = 'NEW'
+ORDER BY HIRE_REQUEST_ID DESC;
